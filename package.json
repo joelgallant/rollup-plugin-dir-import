@@ -1,0 +1,11 @@
+{
+  "name": "rollup-plugin-dir-import",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": "git@github.com:joelgallant/rollup-plugin-dir-import.git",
+  "author": "Joel Gallant <joel@joelgallant.me>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  }
+}
