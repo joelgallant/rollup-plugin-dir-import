@@ -5,7 +5,20 @@
   "repository": "git@github.com:joelgallant/rollup-plugin-dir-import.git",
   "author": "Joel Gallant <joel@joelgallant.me>",
   "license": "MIT",
+
+  "main": "dist/rollup-plugin-dir-import.js",
+  "umd:main": "dist/rollup-plugin-dir-import.umd.js",
+  "module": "dist/rollup-plugin-dir-import.mjs",
+  "source": "src/index.js",
+
+  "scripts": {
+    "prepare": "microbundle build -o dist"
+  },
+
   "dependencies": {
     "fs-extra": "^7.0.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.6.0"
   }
 }
