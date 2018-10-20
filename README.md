@@ -1,4 +1,7 @@
 ## rollup-plugin-dir-import
+[![Build Status](https://travis-ci.com/joelgallant/rollup-plugin-dir-import.svg?branch=master)](https://travis-ci.com/joelgallant/rollup-plugin-dir-import)
+[![npm version](https://badge.fury.io/js/rollup-plugin-dir-import.svg)](https://badge.fury.io/js/rollup-plugin-dir-import)
+
 import all modules in a directory
 
 ```javascript
