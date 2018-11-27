@@ -19,4 +19,9 @@ test('plugin', async () => {
   expect(exports.modules[0]).toEqual({ a: true });
   expect(exports.modules[1]).toEqual({ b: 'foo' });
   expect(exports.modules[2]).toEqual({ c: 'bar' });
+
+  expect(Object.values(exports.files)).toEqual(exports.modules);
+  expect(exports.files.a).toEqual({ a: true });
+  expect(exports.files.b).toEqual({ b: 'foo' });
+  expect(exports.files.c).toEqual({ c: 'bar' });
 });

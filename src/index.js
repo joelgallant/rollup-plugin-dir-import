@@ -22,6 +22,7 @@ module.exports = () => ({
       const files = await fs.readdir(folder);
 
       let exports = [];
+      let namedExports = {};
       let output = '';
       await Promise.all(files
         .filter(file => ['.js', '.ts', '.json', '.jsx', '.tsx'].includes(path.extname(file)))
@@ -31,9 +32,17 @@ module.exports = () => ({
 
           if (from !== importer) {
             output += `import { default as ${name} } from "${from}";\n`;
+
+            namedExports[path.basename(file, path.extname(file))] = name;
             exports.push(name);
           }
         }));
+
+      output += `export const files = {
+        ${Object.entries(namedExports).map(([name, val]) => {
+          return `'${name}': ${val}`;
+        })}
+      };\n`;
 
       output += `export default [${exports.join(',')}];\n`;
 
