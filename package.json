@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-dir-import",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "git@github.com:joelgallant/rollup-plugin-dir-import.git",
   "author": "Joel Gallant <joel@joelgallant.me>",
   "license": "MIT",
