@@ -6,8 +6,10 @@ import all modules in a directory
 
 ```javascript
 import modules from './foldername/*';
-
 // modules is an array of the default exports of all modules in ./foldername
+
+import { files } from './foldername/*';
+// files is an object with { [filename without extension]: default exported from filename }
 ```
 
 ### Usage
